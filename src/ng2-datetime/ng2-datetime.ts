@@ -141,6 +141,10 @@ export class NKDatetime implements ControlValueAccessor, AfterViewInit, OnDestro
         this.onTouched = fn;
     }
 
+    setDisabledState( isDisabled : boolean ) : void {
+        this.readonly = isDisabled;
+    }
+
     checkEmptyValue(e: any) {
         const value = e.target.value;
         if (value === '' && (
